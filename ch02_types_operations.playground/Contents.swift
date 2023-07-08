@@ -67,3 +67,51 @@ let bigString = """
     doing this.
     """
 print(bigString)
+
+// # Tuples
+let coordinates: (Int, Int) = (2, 3)
+
+let coordinates2 = (2, 3)
+
+let coordinatesDoubles = (2.1, 3.5)  // Inferred to be of type (Double, Double)
+
+let coordinatesMixed = (2.1, 3) // Inferred to be of type (Double, Int)
+
+// access the data inside a tuple
+let x1 = coordinates.0
+let y1 = coordinates.1
+
+let coordinatesNamed = (x: 2, y: 3) // Inferred to be of type (x: Int, y: Int)
+let x2 = coordinatesNamed.x
+let y2 = coordinatesNamed.y
+
+let coordinates3D = (x: 2, y: 3, z: 1)
+let (x3, y3, z3) = coordinates3D // The code is equivalent to the following:
+
+/*
+let coordinates3D = (x: 2, y: 3, z: 1)
+x3 = coordinates3D.x
+y3 = coordinates3D.y
+z3 = coordinates3D.z
+*/
+
+// ignore a certain element
+let (x4, y4, _) = coordinates3D
+
+// # A whole lot of number types
+let a: Int16 = 12
+let b: UInt8 = 255
+let c: Int32 = -10000
+
+let answer = Int(a) + Int(b) + Int(c) // answer is an Int
+
+// # Type aliases
+typealias Animal = String
+
+let myPet: Animal = "Dog"
+
+typealias Coordinates = (Int, Int)
+let xy: Coordinates = (2, 4)
+
+// # A peek behind the curtains: Protocols
+
