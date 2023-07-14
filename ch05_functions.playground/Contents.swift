@@ -110,3 +110,62 @@ func getValue() -> String {
 
 let valueInt: Int = getValue()
 let valueString: String = getValue()
+
+// # Function as variables
+func add(_ a: Int, _ b: Int) -> Int {
+    a + b
+}
+
+var function = add
+
+function(4, 2)
+
+func subtract(_ a: Int, _ b: Int) -> Int {
+    a - b
+}
+
+function = subtract
+function(4, 2)
+
+func printResult(_ function: (Int, Int) -> Int, _ a: Int, _ b: Int) {
+    let result = function(a, b)
+    print(result)
+}
+
+printResult(add, 4, 2)
+
+// ## The land of no return
+func noReturn() -> Never {
+    // Without the infinite while loop, the following error is shown:
+    // global function with uninhabited return type 'Never'
+    // is missing call to another never-returning function on all paths
+    while true {
+        
+    }
+}
+
+// ## Writing good functions
+
+// # Commenting your functions
+
+/// Calculates the average of three values
+/// - Parameters:
+///     - a: The first value.
+///     - b: The second value.
+///     - c: The third value.
+/// - Returns: The average of the three values.
+func calculateAverage(of a: Double, and b: Double, and c: Double) -> Double {
+    let total = a + b + c
+    let average = total / 3
+    return average
+}
+
+calculateAverage(of: 1, and: 3, and: 5)
+
+
+
+
+
+
+
+
