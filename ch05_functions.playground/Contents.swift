@@ -161,11 +161,3 @@ func calculateAverage(of a: Double, and b: Double, and c: Double) -> Double {
 }
 
 calculateAverage(of: 1, and: 3, and: 5)
-
-
-
-
-
-
-
-
