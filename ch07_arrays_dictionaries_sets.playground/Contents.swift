@@ -249,19 +249,3 @@ let removedElement = someSet.remove(1)
 print(removedElement!) // => 1
 
 // ## Running time for set operations
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
